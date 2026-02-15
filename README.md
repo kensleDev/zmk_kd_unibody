@@ -60,8 +60,16 @@ A 36-key unibody wireless keyboard powered by ZMK firmware and nice!nano control
 - Hold `ESC` on SYM layer → BLE layer
 
 **NUM Layer**: Numbers 0-9, F1-F12, media controls, **£ symbol**
-**SYM Layer**: Symbols, brackets, navigation (arrows, home/end/pgup/pgdn)
+**SYM Layer**: Symbols, brackets, navigation (arrows, home/end/pgup/pgdn), **Sticky Shift/Caps Lock**
 **BLE Layer**: Bluetooth device switching (BT0-BT4), clear bonds
+
+### Special Keys
+
+**Sticky Shift / Caps Lock** (SYM layer, Y position):
+- **Single tap** → Sticky Shift (capitalizes next letter only, then auto-disables)
+- **Double tap** → Caps Lock (traditional toggle, tap again to disable)
+
+**The analogy**: Sticky shift is like a one-shot modifier - tap once, type one capital letter, it auto-releases. Perfect for starting sentences or proper nouns like "Julian" without holding shift!
 
 ## 💷 GBP Pound Symbol (£) + UK Layout Setup
 

@@ -34,6 +34,16 @@
                 ;
         };
     };
+
+    behaviors {
+        td_caps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CAPS";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&kp CAPS>;
+        };
+    };
 };
 
 / {
@@ -87,7 +97,7 @@
         sym_layer {
 /* SYM Layer: Symbols + Navigation (UK OS → US symbols)
  * ┌───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┐
- * │ ` │ @ │ # │ _ │ % │       │RST│HOM│PDN│PUP│END│
+ * │ ` │ @ │ # │ _ │ % │       │CAP│HOM│PDN│PUP│END│
  * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
  * │ [ │ ` │ ' │ " │ ^ │       │ $ │ ← │ ↓ │ ↑ │ → │
  * ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
@@ -102,12 +112,13 @@
  * - # sent via NUHS key (UK # key)
  * - " sent via Shift+2 (UK layout interprets as ")
  * - £ available on NUM layer for convenience
+ * - CAP: 1 tap = Sticky Shift (caps next letter only), 2 taps = Caps Lock
  */
             bindings = <
-    &kp GRAVE  &kp DQT   &kp NUHS  &kp UNDER    &kp PRCNT  &sys_reset &kp HOME &kp PG_DN &kp PG_UP &kp END
-    &kp LBRC   &kp GRAVE &kp SQT   &kp LS(N2)   &kp CARET  &kp DLLR   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
-    &kp PIPE   &kp LBKT  &kp LBRC  &kp LPAR     &kp AMPS   &kp GRAVE  &kp RPAR &kp RBRC  &kp RBKT  &kp NUBS
-                         &trans    &kp DEL      &mo BLE    &trans     &trans   &trans
+    &kp GRAVE  &kp DQT   &kp NUHS  &kp UNDER    &kp PRCNT  &td_caps &kp HOME &kp PG_DN &kp PG_UP &kp END
+    &kp LBRC   &kp GRAVE &kp SQT   &kp LS(N2)   &kp CARET  &kp DLLR &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
+    &kp PIPE   &kp LBKT  &kp LBRC  &kp LPAR     &kp AMPS   &kp GRAVE &kp RPAR &kp RBRC  &kp RBKT  &kp NUBS
+                         &trans    &kp DEL      &mo BLE    &trans   &trans   &trans
             >;
         };
 
