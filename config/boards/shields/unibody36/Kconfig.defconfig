@@ -1,0 +1,9 @@
+# Copyright (c) 2024
+# SPDX-License-Identifier: MIT
+
+if SHIELD_UNIBODY36
+
+config ZMK_KEYBOARD_NAME
+    default "Unibody 36"
+
+endif

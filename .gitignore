@@ -1,0 +1,22 @@
+# Zephyr/ZMK build artifacts
+build/
+.west/
+modules/
+tools/
+zephyr/
+bootloader/
+zmk/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs (keep these commented if you want to commit built firmware)
+# *.uf2
