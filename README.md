@@ -5,8 +5,9 @@ A 36-key unibody wireless keyboard powered by ZMK firmware and nice!nano control
 ## 🎯 Features
 
 - **Wireless** via Bluetooth Low Energy (BLE)
-- **Home row mods** (GACS: GUI, ALT, CTRL, SHIFT)
-- **4 layers**: Main (QWERTY), NUM (numbers + F-keys), SYM (symbols + nav), BLE (Bluetooth controls)
+- **Home row mods** (GASC: GUI, ALT, SHIFT, CTRL)
+- **UK OS layout** with US symbol positions + dedicated £ key
+- **4 layers**: Main (QWERTY), NUM (numbers + F-keys + £), SYM (symbols + nav), BLE (Bluetooth controls)
 - **300ms tapping term** with tap-preferred behavior
 - **Battery monitoring** built-in
 - **Power saving** with sleep mode after 30 minutes
@@ -26,8 +27,8 @@ A 36-key unibody wireless keyboard powered by ZMK firmware and nice!nano control
 ┌───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┐
 │ Q │ W │ E │ R │ T │       │ Y │ U │ I │ O │ P │
 ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
-│GUI│ALT│ D │CTL│NUM│       │NUM│CTL│ K │ALT│GUI│
-│ A │ S │   │ F │ G │       │ H │ J │   │ L │ ; │
+│GUI│ALT│SFT│CTL│NUM│       │NUM│CTL│SFT│ALT│GUI│
+│ A │ S │ D │ F │ G │       │ H │ J │ K │ L │ ; │
 ├───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┤
 │ Z │ X │ C │ V │ B │       │ N │ M │ , │ . │ / │
 └───┴───┴───┴───┴───┘       └───┴───┴───┴───┴───┘
@@ -39,15 +40,15 @@ A 36-key unibody wireless keyboard powered by ZMK firmware and nice!nano control
 
 ### Home Row Mods
 
-**Left hand (GACS)**:
+**Left hand (GASC)**:
 - `A` → GUI when held, A when tapped
 - `S` → ALT when held, S when tapped
-- `D` → Pure D (no modifier)
+- `D` → SHIFT when held, D when tapped
 - `F` → CTRL when held, F when tapped
 
-**Right hand (mirrored)**:
+**Right hand (mirrored CSAG)**:
 - `J` → CTRL when held, J when tapped
-- `K` → Pure K (no modifier)
+- `K` → SHIFT when held, K when tapped
 - `L` → ALT when held, L when tapped
 - `;` → GUI when held, ; when tapped
 
@@ -58,9 +59,49 @@ A 36-key unibody wireless keyboard powered by ZMK firmware and nice!nano control
 - Hold `Space` → SYM layer
 - Hold `ESC` on SYM layer → BLE layer
 
-**NUM Layer**: Numbers 0-9, F1-F12, media controls
+**NUM Layer**: Numbers 0-9, F1-F12, media controls, **£ symbol**
 **SYM Layer**: Symbols, brackets, navigation (arrows, home/end/pgup/pgdn)
 **BLE Layer**: Bluetooth device switching (BT0-BT4), clear bonds
+
+## 💷 GBP Pound Symbol (£) + UK Layout Setup
+
+This keyboard is configured for **UK OS layout** while maintaining US symbol positions.
+
+### Set Your OS to UK Layout
+
+**macOS**:
+```
+System Settings → Keyboard → Input Sources
+Add "British - PC" and remove "U.S."
+```
+
+**Windows**:
+```
+Settings → Time & Language → Language
+Add "English (United Kingdom)"
+```
+
+**Linux**:
+```bash
+setxkbmap gb
+```
+
+### How to Type £
+
+You have **two ways** to type £:
+
+**Option 1 - Native UK layout:**
+- Just press `Shift + 3` → £
+
+**Option 2 - Dedicated key on NUM layer:**
+- Hold `G` or `H` → Press Y position → £
+
+### What You Get
+
+- ✅ OS set to UK layout
+- ✅ All symbols in US positions (@ where you expect, # where you expect)
+- ✅ Easy access to £ via Shift+3 OR dedicated NUM key
+- ✅ Best of both worlds!
 
 ## 🚀 Setup & Build
 
