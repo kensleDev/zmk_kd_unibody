@@ -3,5 +3,5 @@
 
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano@1.0.0
     shield: unibody36

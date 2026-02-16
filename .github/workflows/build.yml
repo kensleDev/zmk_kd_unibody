@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Unibody36)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=unibody36 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano@1.0.0 -- -DSHIELD=unibody36 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Unibody36 DTS File
         if: ${{ always() }}
         run: |
