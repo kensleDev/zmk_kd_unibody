@@ -1,0 +1,5 @@
+# Build settings_reset firmware to clear flash
+---
+include:
+  - board: nice_nano@1.0.0
+    shield: settings_reset

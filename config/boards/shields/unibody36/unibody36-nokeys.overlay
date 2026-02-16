@@ -1,0 +1,19 @@
+/*
+ * NO KEYS TEST - Just boot the firmware with no matrix
+ * If this doesn't boot, there's a fundamental firmware or hardware issue
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN";
+
+        input-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+};
