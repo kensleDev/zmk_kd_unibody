@@ -4,4 +4,6 @@
 ---
 include:
   - board: nice_nano@1.0.0
+    shield: settings_reset
+  - board: nice_nano@1.0.0
     shield: unibody36
