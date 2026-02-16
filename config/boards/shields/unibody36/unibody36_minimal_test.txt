@@ -1,0 +1,16 @@
+MINIMAL TEST CONFIGURATION
+=========================
+
+Try commenting out some column pins to see if one is causing boot failure.
+
+Suspect pins that might conflict with nice!nano:
+- P0.06 (battery voltage divider)
+- P1.00 (might be used for other functions)
+
+To test:
+1. Try removing P0.06 from col-gpios temporarily
+2. See if keyboard boots and shows up in Bluetooth
+3. If it boots, we know P0.06 is the problem and need to rewire that column
+
+Alternative approach:
+Flash a completely stock ZMK firmware to verify nice!nano hardware is working.
