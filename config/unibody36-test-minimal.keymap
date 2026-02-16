@@ -1,0 +1,22 @@
+/*
+ * Minimal 3x3 test keymap
+ * Just 9 keys with basic letters
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp Q  &kp W  &kp E
+                &kp A  &kp S  &kp D
+                &kp Z  &kp X  &kp C
+            >;
+        };
+    };
+};
